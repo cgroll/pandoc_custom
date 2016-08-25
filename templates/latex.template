@@ -13,12 +13,32 @@ $if(linestretch)$
 $endif$
 \usepackage{amssymb,amsmath, amsthm}
 
-\theoremstyle{definition}
+\newtheoremstyle{ownStyleItal}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\sf\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bf}% name of head font
+  {:}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+\newtheoremstyle{ownStyle}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\sf}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bf}% name of head font
+  {:}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+\theoremstyle{ownStyle}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 
-\theoremstyle{definition}
+\theoremstyle{ownStyleItal}
 \newtheorem{defn}[theorem]{Definition}
 
 \theoremstyle{remark}
@@ -144,7 +164,7 @@ $if(graphics)$
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+%\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
