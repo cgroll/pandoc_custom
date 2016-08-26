@@ -42,6 +42,7 @@ $endif$
 \newtheorem{defn}[theorem]{Definition}
 
 \theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
 
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
