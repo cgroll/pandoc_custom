@@ -33,6 +33,16 @@ $endif$
   { }% space after theorem head; " " = normal interword space
   {}% Manually specify head
 
+\newtheoremstyle{minor}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bf}% name of head font
+  {}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
 \theoremstyle{ownStyle}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -41,8 +51,9 @@ $endif$
 \theoremstyle{ownStyleItal}
 \newtheorem{defn}[theorem]{Definition}
 
-\theoremstyle{remark}
-\newtheorem{example}[theorem]{Example}
+\theoremstyle{minor}
+\newtheorem*{example}{Example}
+\newtheorem*{remark}{Remark}
 
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
