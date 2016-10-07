@@ -12,6 +12,7 @@ $if(linestretch)$
 \setstretch{$linestretch$}
 $endif$
 \usepackage{amssymb,amsmath, amsthm}
+\usepackage{float}
 
 \newtheoremstyle{ownStyleItal}% name of the style to be used
   {12pt}% measure of space to leave above the theorem. E.g.: 3pt
